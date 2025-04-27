@@ -3397,250 +3397,215 @@ input, select, textarea {
 					background-color: #18bfef;
 				}
 
-		#intro h1 {
-			font-size: 4rem;
-			font-weight: 700; 
-			letter-spacing: 0.05em; 
-			line-height: 1.2;
-			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-			text-align: center; 
-			color: #daf8fd; 
-			margin-top: 2rem;
-			border-bottom: 3px solid #000000; /* choose your brand color, e.g., purple */
-            display: inline-block;
-            padding-bottom: 0.3rem;
-           -webkit-text-stroke: 2px #000000;
-		}
+		/* ================== INTRO TITLE ================== */
 
-		#intro p {
-			font-size: 2.5rem;
-			font-weight: 700;
-			font-style: normal;
-			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-			text-align: center;
-			color: #daf8fd;
-			-webkit-text-stroke: 1.2px black;
-			margin-top: 1rem;
-			margin-bottom: 1rem;
-			letter-spacing: 0.5px;
-			
-		}
-		
-		
-		@media (max-width: 600px) {
-			#intro p {
-				font-size: 2rem; 
-				-webkit-text-stroke: 1px black;
-				font-style: normal;
-			    text-align: center;
-			}
-		}
+#intro h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: #daf8fd;
+    margin-top: 2rem;
+    border-bottom: 3px solid #000000;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+    -webkit-text-stroke: 2px #000000;
+}
 
-		#intro + #header {
-			margin-top: -20rem;
-		}
+/* ================== INTRO PARAGRAPH ================== */
 
-			#intro + #header .logo {
-				-moz-transform: translateY(2rem);
-				-webkit-transform: translateY(2rem);
-				-ms-transform: translateY(2rem);
-				transform: translateY(2rem);
-				opacity: 0;
-				visibility: hidden;
-			}
+#intro p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-style: normal;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: #daf8fd;
+    -webkit-text-stroke: 1.2px black;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
 
-		#intro.hidden {
-			pointer-events: none;
-			-moz-transform: translateY(2rem);
-			-webkit-transform: translateY(2rem);
-			-ms-transform: translateY(2rem);
-			transform: translateY(2rem);
-			-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, visibility 0.5s;
-			-webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease, visibility 0.5s;
-			-ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease, visibility 0.5s;
-			transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
-			opacity: 0;
-			visibility: hidden;
-		}
+/* ================== RESPONSIVE ================== */
 
-			#intro.hidden + #header .logo {
-				-moz-transform: translateY(0);
-				-webkit-transform: translateY(0);
-				-ms-transform: translateY(0);
-				transform: translateY(0);
-				opacity: 1;
-				visibility: visible;
-			}
+@media screen and (max-width: 980px) {
+    #intro {
+        padding: 4rem 4rem 2rem 4rem;
+        min-height: 90vh;
+    }
 
-		body.is-preload #intro {
-			-moz-transform: translateY(2rem);
-			-webkit-transform: translateY(2rem);
-			-ms-transform: translateY(2rem);
-			transform: translateY(2rem);
-			opacity: 0;
-		}
+    #intro p br {
+        display: none;
+    }
 
-			body.is-preload #intro:not(.hidden) + #header + #nav {
-				-moz-transform: translateY(4rem);
-				-webkit-transform: translateY(4rem);
-				-ms-transform: translateY(4rem);
-				transform: translateY(4rem);
-				opacity: 0;
-			}
+    #intro + #header {
+        margin-top: -14rem;
+    }
+}
 
-		@media screen and (max-width: 980px) {
+@media screen and (max-width: 736px) {
+    #intro {
+        padding: 3rem 2rem 1rem 2rem;
+        min-height: 80vh;
+    }
 
-			#intro {
-				padding: 4rem 4rem 2rem 4rem ;
-				min-height: 90vh;
-			}
+    #intro h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        line-height: 1.2;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        text-align: center;
+        color: #daf8fd;
+        margin-top: 2rem;
+        border-bottom: 3px solid #000000;
+        display: inline-block;
+        padding-bottom: 0.3rem;
+        -webkit-text-stroke: 2px #000000;
+    }
 
-				#intro p br {
-					display: none;
-				}
+    #intro p {
+        font-size: 1.2rem;
+        font-weight: 700;
+        font-style: normal;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        text-align: center;
+        color: #daf8fd;
+        -webkit-text-stroke: 0.5px black;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        letter-spacing: 0.5px;
+    }
 
-				#intro + #header {
-					margin-top: -14rem;
-				}
+    #intro .actions {
+        display: none;
+    }
 
-		}
+    #header {
+        padding-bottom: 3rem;
+    }
 
-		@media screen and (max-width: 736px) {
+    #header .logo {
+        font-size: 1.75rem;
+        border-width: 3px !important;
+    }
+}
 
-			#intro {
-				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 80vh;
-			}
+/* תיקון מיוחד למסכים קטנים מאוד מתחת ל-600px */
+@media screen and (max-width: 600px) {
+    #intro p {
+        font-size: 1.2rem;
+        -webkit-text-stroke: 0.5px black;
+        text-align: center;
+    }
+}
 
-				#intro h1 {
-					font-size: 3.25rem;
-					line-height: 1.1;
-					margin-bottom: 1rem;
-				}
+/* ================== ANIMATIONS ================== */
 
-				#intro p {
-					font-size: 1rem;
-					margin-top: 0rem;
-				}
+#intro + #header {
+    margin-top: -20rem;
+}
 
-				#intro .actions {
-					display: none;
-				}
+#intro + #header .logo {
+    transform: translateY(2rem);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
 
-		}
+#intro.hidden {
+    pointer-events: none;
+    transform: translateY(2rem);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
 
-/* Header */
+#intro.hidden + #header .logo {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
 
-	#header {
-		color: #ffffff;
-		-moz-align-items: center;
-		-webkit-align-items: center;
-		-ms-align-items: center;
-		align-items: center;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		-moz-justify-content: -moz-flex-end;
-		-webkit-justify-content: -webkit-flex-end;
-		-ms-justify-content: -ms-flex-end;
-		justify-content: flex-end;
-		pointer-events: none;
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-		height: 20rem;
-		padding-bottom: 8rem;
-		position: relative;
-		text-align: center;
-		z-index: 2;
-	}
+body.is-preload #intro {
+    transform: translateY(2rem);
+    opacity: 0;
+}
 
-		#header input, #header select, #header textarea {
-			color: #ffffff;
-		}
+body.is-preload #intro:not(.hidden) + #header + #nav {
+    transform: translateY(4rem);
+    opacity: 0;
+}
 
-		#header a {
-			color: #ffffff;
-			border-bottom-color: rgba(255, 255, 255, 0.5);
-		}
+/* ================== HEADER ================== */
 
-			#header a:hover {
-				border-bottom-color: transparent;
-				color: #18bfef !important;
-			}
+#header {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    pointer-events: none;
+    user-select: none;
+    height: 20rem;
+    padding-bottom: 8rem;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
 
-		#header strong, #header b {
-			color: #ffffff;
-		}
+#header a {
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
 
-		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
-			color: #ffffff;
-		}
+#header a:hover {
+    border-bottom: none;
+    color: #18bfef !important;
+}
 
-		#header blockquote {
-			border-left-color: #ffffff;
-		}
+#header strong, #header b,
+#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
+    color: #ffffff;
+}
 
-		#header code {
-			background: rgba(255, 255, 255, 0.075);
-			border-color: #ffffff;
-		}
+#header blockquote {
+    border-left-color: #ffffff;
+}
 
-		#header hr {
-			border-bottom-color: #ffffff;
-		}
+#header code {
+    background: rgba(255, 255, 255, 0.075);
+    border-color: #ffffff;
+}
 
-		#header .logo {
-			-moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, -moz-transform 0.5s ease, visibility 0.5s;
-			-webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, -webkit-transform 0.5s ease, visibility 0.5s;
-			-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, -ms-transform 0.5s ease, visibility 0.5s;
-			transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
-			pointer-events: auto;
-			border-style: solid;
-			border-color: #ffffff;
-			border-width: 5px !important;
-			font-family: "Source Sans Pro", Helvetica, sans-serif;
-			font-size: 2.25rem;
-			font-weight: 900;
-			letter-spacing: 0.075em;
-			line-height: 1;
-			padding: 1rem 1.75rem;
-			text-transform: uppercase;
-			visibility: visible;
-		}
+#header hr {
+    border-bottom-color: #ffffff;
+}
 
-			#header .logo:hover {
-				border-color: #18bfef !important;
-				color: #18bfef !important;
-			}
+#header .logo {
+    transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+    pointer-events: auto;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 5px !important;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 2.25rem;
+    font-weight: 900;
+    letter-spacing: 0.075em;
+    line-height: 1;
+    padding: 1rem 1.75rem;
+    text-transform: uppercase;
+    visibility: visible;
+}
 
-		@media screen and (max-width: 980px) {
+#header .logo:hover {
+    border-color: #18bfef !important;
+    color: #18bfef !important;
+}
 
-			#header {
-				height: 14rem;
-				padding-bottom: 4rem;
-			}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			#header {
-				padding-bottom: 3rem;
-			}
-
-				#header .logo {
-					font-size: 1.75rem;
-					border-width: 3px !important;
-				}
-
-		}
 
 /* Nav */
 
